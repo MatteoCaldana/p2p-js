@@ -97,7 +97,7 @@
       </li>
     {/each}
   </ul>
-  <div>
+  <div style="margin-bottom:20px">
     <input
       type="text"
       placeholder="Enter your username"
@@ -134,6 +134,7 @@
     <h3>You have chosen to be a Guest</h3>
     <p>Connect to the Host with the following ID</p>
     <input
+      style="margin-bottom:20px"
       type="text"
       placeholder="Enter the Host ID"
       bind:value={otherPeerId}

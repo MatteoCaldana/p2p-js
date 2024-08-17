@@ -40,11 +40,11 @@
       status = "error";
     });
   };
-  initializePeer();
+  //initializePeer();
 </script>
 
 <main>
-  {#if status === "error"}
+  <!-- {#if status === "error"}
     <p>Peer Error! Please refresh the page.</p>
   {:else if status === "closed"}
     <p>Connection closed! Please refresh the page.</p>
@@ -54,7 +54,9 @@
     <Mainpage bind:peer={peer} bind:status={status} bind:connection={connection}/>
   {:else}
     <Homepage bind:peer={peer} bind:status={status} bind:connection={connection}/>
-  {/if}
+  {/if} -->
+
+  <Mainpage bind:peer={peer} bind:status={status} bind:connection={connection}/>
 </main>
 
 <style>
