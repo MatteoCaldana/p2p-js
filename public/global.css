@@ -1,0 +1,132 @@
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+li.completed {
+  color: #7a9f7b;
+  list-style-type: "\2714";
+}
+
+li.current {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  min-width: 150px;
+}
+
+.host {
+  border-color: #e69b1a;
+}
+
+.guest {
+  border-color: #008cba;
+}
+
+.button.filled {
+  background-color: var(--btn-background);
+  color: white;
+}
+
+.button.outlined {
+  background-color: transparent;
+  color: var(--btn-background);
+}
+
+.host.filled {
+  --btn-background: #e69b1a;
+}
+
+.guest.filled {
+  --btn-background: #008cba;
+}
+
+.host.outlined {
+  --btn-background: #e69b1a;
+}
+
+.guest.outlined {
+  --btn-background: #008cba;
+}
+
+button:disabled {
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+  color: #666 !important;
+  border-color: #666 !important;
+}
+
+.host:hover:enabled {
+  background-color: #e2c188;
+}
+
+.guest:hover:enabled {
+  background-color: #98c4d8;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}

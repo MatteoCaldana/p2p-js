@@ -1,28 +1,12 @@
-<div style="white-space: pre;">
+# Peer to peer communication system in JavaScript
+System for simple two-way communication using a WebRTC peer-to-peer connection.
 
-# Peer-to-Peer Cue System #
+## Live Demo
+https://matteocaldana.github.io/p2p-js/
 
-Cue system for simple two-way communication and visual signaling using a WebRTC peer-to-peer connection.
-This was initially designed for signaling on-stage actors during a theater performance.
+## References
 
-Demo: https://jmcker.github.io/Peer-to-Peer-Cue-System
-
-[PeerJS examples](https://peerjs.com/examples.html)
-
-### Setup ###
-
-1. Open receive.html on the receiving device.
-2. Open send.html on the sending device.
-3. Copy the ID from the receiving device to the sending device's ID field.
-4. Press *Connect*.
-4. Both should indicate a successful connection in the *Status* box.
-
-### Features ###
-
-The receiver has access to large indicators for standby, go, fade, and stop signals.
-
-The sender has access to buttons that send the standby, go, fade, and stop signals, triggering the receiver's indicators.
-
-Both have access to a two-way messenger for additional communication.
-
-</div>
+- The backbone is the library [PeerJS](https://github.com/peers/peerjs), here some [examples](https://peerjs.com/examples).
+- The communication is inspired by the [Peer-to-Peer-Cue-System](https://github.com/jmcker/Peer-to-Peer-Cue-System).
+- At the core everything exploits [WebRTC](https://github.com/webrtc)
+- Here a [library](https://github.com/rameshvarun/netplayjs) that however needs a matching server for multiplayer games 
