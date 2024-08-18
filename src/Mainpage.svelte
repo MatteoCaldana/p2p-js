@@ -1,18 +1,30 @@
 <script>
+  export let peer;
+  export let connection;
+  export let status;
+  export let messagesData;
+  export let username;
+
   import { afterUpdate } from "svelte";
   import Guesswho from "./Guesswho.svelte";
 
-  const colors = ["green", "blue", "red"];
+  const colors = ["gray", "green", "blue", "red"];
   const playgroundStatuses = ["chat", "guesswho"];
+
+  let userIDs = ["", peer.id];
 
   let chatElement;
   let isChatOpen = false;
   let playgroundStatus = "chat";
   let newMessage = "";
-  let users = [];
   let messages = [
-    { user: "User 1", message: "Hello!", timestamp: new Date().getTime() },
-    { user: "User 1", message: "Hi there!", timestamp: new Date().getTime() },
+    {
+      id: "",
+      kind: "chat",
+      user: "",
+      message: `Connected to: ${connection.peer}`,
+      timestamp: new Date().getTime(),
+    },
   ];
 
   const handleChatCommands = (message) => {
@@ -32,12 +44,31 @@
 
   const sendMessage = () => {
     if (newMessage.trim() !== "") {
-      handleChatCommands(newMessage);
-      messages = [
-        ...messages,
-        { user: "Me", message: newMessage, timestamp: new Date().getTime() },
+      messagesData = [
+        ...messagesData,
+        {
+          kind: "chat",
+          user: "Me",
+          id: peer.id,
+          message: newMessage,
+          timestamp: new Date().getTime(),
+        },
       ];
       newMessage = "";
+    }
+  };
+
+  const handleNewMessage = (message) => {
+    console.log("New message:", message);
+    if (message.kind === "chat") {
+      handleChatCommands(message.message);
+      messages = [...messages, message];
+      if (message.id === peer.id) {
+        message.user = username;
+        connection.send(JSON.stringify(message));
+      }
+    } else {
+      console.log("Unknown message kind:", message.kind);
     }
   };
 
@@ -49,19 +80,21 @@
     node.scroll({ top: node.scrollHeight, behavior: "smooth" });
   };
 
-  $: users = [...new Set(messages.map((message) => message.user))];
+  $: userIDs = ["", peer.id, connection.peer];
+  $: messagesData.length && handleNewMessage(messagesData[messagesData.length - 1]);
 </script>
 
 <div class="container">
   <!-- Central Content Area -->
-  <div class="content">
-    {#if playgroundStatus === "chat"}
+
+  {#if playgroundStatus === "chat"}
+    <div class="content">
       <h1>Welcome to the Playground</h1>
       <p>You can chat, but there is also much more!</p>
-    {:else if playgroundStatus === "guesswho"}
-      <Guesswho />
-    {/if}
-  </div>
+    </div>
+  {:else if playgroundStatus === "guesswho"}
+    <Guesswho />
+  {/if}
 
   <!-- Lateral Chat Area -->
   <div class="chat" class:open={isChatOpen}>
@@ -70,10 +103,10 @@
     </div>
     <div class="chat-messages" bind:this={chatElement}>
       {#each messages as message}
-        <p>
+        <p style={`margin-${message.id === peer.id ? "left" : "right"}:${message.id === "" ? 0 : 10}px`}>
           {new Date(message.timestamp).toLocaleTimeString("it-IT")} -
           <b
-            style={`color:${colors[users.indexOf(message.user) % colors.length]}`}
+            style={`color:${colors[userIDs.indexOf(message.id) % colors.length]}`}
           >
             {message.user}:
           </b>
@@ -153,7 +186,7 @@
   .chat-messages {
     text-align: left;
     flex: 1;
-    padding: 10px;
+    padding: 5px;
     overflow-y: auto; /* Make the messages scrollable */
   }
 

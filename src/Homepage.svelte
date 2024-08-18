@@ -2,6 +2,8 @@
   export let peer;
   export let connection;
   export let status;
+  export let messagesData;
+  export let username;
 
   const steps = [
     { id: 0, description: "Enter your username." },
@@ -9,7 +11,7 @@
     { id: 2, description: "Share/Enter the ID" },
   ];
 
-  let username = "";
+  
   let hostOrGuest = ""; // Can be "host", "guest", or ""
   let currentStep = 0;
   let otherPeerId = "";
@@ -17,7 +19,8 @@
   console.log("Peer:", peer);
 
   const handleData = (data) => {
-    console.log("Data:", data);
+    console.log("Recived data from peer. Data:", data);
+    messagesData = [...messagesData, JSON.parse(data)];
   };
 
   const bindDataHandle = () => {
@@ -41,8 +44,8 @@
 
         connection = newConnection;
         console.log("Connected to: " + connection.peer);
-        status = "connected";
         bindDataHandle();
+        status = "connected";
       } else if (hostOrGuest === "guest") {
         // Disallow incoming connections
         newConnection.on("open", () => {
@@ -105,25 +108,30 @@
     />
   </div>
   <div class="buttons">
-    <button
-      class="button host"
-      on:click={() => (hostOrGuest = "host")}
-      class:filled={hostOrGuest === "host"}
-      class:outlined={hostOrGuest !== "host" && hostOrGuest !== "guest"}
-      disabled={username === ""}
-    >
-      Be a Host
-    </button>
-    <button
-      class="button guest"
-      on:click={() => (hostOrGuest = "guest")}
-      class:filled={hostOrGuest === "guest"}
-      class:outlined={hostOrGuest !== "guest" && hostOrGuest !== "host"}
-      disabled={username === ""}
-    >
-      Be a Guest
-    </button>
+    {#if peer}
+      <button
+        class="button host"
+        on:click={() => (hostOrGuest = "host")}
+        class:filled={hostOrGuest === "host"}
+        class:outlined={hostOrGuest !== "host" && hostOrGuest !== "guest"}
+        disabled={username === ""}
+      >
+        Be a Host
+      </button>
+      <button
+        class="button guest"
+        on:click={() => (hostOrGuest = "guest")}
+        class:filled={hostOrGuest === "guest"}
+        class:outlined={hostOrGuest !== "guest" && hostOrGuest !== "host"}
+        disabled={username === ""}
+      >
+        Be a Guest
+      </button>
+    {:else}
+      <p>Wait few seconds, connecting to the server...</p>
+    {/if}
   </div>
+
   {#if hostOrGuest === "host"}
     <h3>You have chosen to be a Host</h3>
     <p>Share the following ID with the Guest:</p>

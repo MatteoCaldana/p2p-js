@@ -7,6 +7,8 @@
   let lastPeerId = null;
   let connection = null;
   let status = "idle";
+  let messagesData = [];
+  let username = "";
 
   const initializePeer = () => {
     peer = new Peer(null, { debug: 2 });
@@ -40,23 +42,37 @@
       status = "error";
     });
   };
-  //initializePeer();
+  initializePeer();
 </script>
 
 <main>
-  <!-- {#if status === "error"}
+  {#if status === "error"}
     <p>Peer Error! Please refresh the page.</p>
   {:else if status === "closed"}
     <p>Connection closed! Please refresh the page.</p>
   {:else if status === "disconnected"}
     <p>Peer has disconnected. Trying to reconnect.</p>
   {:else if status === "connected"}
-    <Mainpage bind:peer={peer} bind:status={status} bind:connection={connection}/>
+    <Mainpage
+      bind:peer
+      bind:status
+      bind:connection
+      bind:messagesData
+      bind:username
+    />
   {:else}
-    <Homepage bind:peer={peer} bind:status={status} bind:connection={connection}/>
-  {/if} -->
+    <Homepage
+      bind:peer
+      bind:status
+      bind:connection
+      bind:messagesData
+      bind:username
+    />
+  {/if}
 
-  <Mainpage bind:peer={peer} bind:status={status} bind:connection={connection}/>
+  <div class="build-timestamp">
+    Deployed on: 2024-08-18 12:06:36
+  </div>
 </main>
 
 <style>
@@ -65,5 +81,13 @@
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+  }
+
+  .build-timestamp {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    font-size: 8px;
+    color: #aaa;
   }
 </style>
