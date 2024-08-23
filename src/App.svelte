@@ -2,6 +2,7 @@
   import Peer from "peerjs";
   import Homepage from "./Homepage.svelte";
   import Mainpage from "./Mainpage.svelte";
+  import Guesswho from "./Guesswho/index.svelte";
 
   let peer = null;
   let lastPeerId = null;
@@ -53,13 +54,7 @@
   {:else if status === "disconnected"}
     <p>Peer has disconnected. Trying to reconnect.</p>
   {:else if status === "connected"}
-    <Mainpage
-      bind:peer
-      bind:status
-      bind:connection
-      bind:messagesData
-      bind:username
-    />
+    <Mainpage bind:peer bind:connection bind:messagesData bind:username />
   {:else}
     <Homepage
       bind:peer
@@ -69,10 +64,7 @@
       bind:username
     />
   {/if}
-
-  <div class="build-timestamp">
-    Deployed on: 2024-08-18 12:06:36
-  </div>
+  <div class="build-timestamp">Deployed on: 2024-08-23 23:48:55
 </main>
 
 <style>

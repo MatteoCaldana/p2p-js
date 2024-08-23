@@ -1,12 +1,12 @@
 <script>
   export let peer;
   export let connection;
-  export let status;
   export let messagesData;
   export let username;
 
   import { afterUpdate } from "svelte";
-  import Guesswho from "./Guesswho.svelte";
+  import Guesswho from "./Guesswho/index.svelte";
+  import { images } from "./lib/images.js";
 
   const colors = ["gray", "green", "blue", "red"];
   const playgroundStatuses = ["chat", "guesswho"];
@@ -20,8 +20,8 @@
   let messages = [
     {
       id: "",
-      kind: "chat",
-      user: "",
+      type: "chat",
+      user: "room",
       message: `Connected to: ${connection.peer}`,
       timestamp: new Date().getTime(),
     },
@@ -47,7 +47,7 @@
       messagesData = [
         ...messagesData,
         {
-          kind: "chat",
+          type: "chat",
           user: "Me",
           id: peer.id,
           message: newMessage,
@@ -58,17 +58,45 @@
     }
   };
 
+  const addDebugMessage = (msg) => {
+    messages = [
+      ...messages,
+      {
+        id: "",
+        type: "chat",
+        timestamp: new Date().getTime(),
+        user: "room",
+        message: msg,
+      },
+    ];
+  };
+
   const handleNewMessage = (message) => {
     console.log("New message:", message);
-    if (message.kind === "chat") {
+    if (message.type === "chat") {
       handleChatCommands(message.message);
       messages = [...messages, message];
-      if (message.id === peer.id) {
-        message.user = username;
-        connection.send(JSON.stringify(message));
-      }
     } else {
-      console.log("Unknown message kind:", message.kind);
+      console.log("Unknown message type:", message.type);
+
+      if (message.type === "action") {
+        if (message.subType === "guesswho") {
+          if (message.action === "guess") {
+            addDebugMessage(
+              `${message.user} guesses character ${images[message.value].name}: ${message.result}`
+            );
+          } else if (message.action === "question") {
+            addDebugMessage(
+              `${message.user} asks if the ${message.key} of X is ${message.value}: ${message.result}`
+            );
+          }
+        }
+      }
+    }
+    if (message.id === peer.id) {
+      message.user = username;
+      console.log("Sending message:", message);
+      connection.send(JSON.stringify(message));
     }
   };
 
@@ -81,21 +109,20 @@
   };
 
   $: userIDs = ["", peer.id, connection.peer];
-  $: messagesData.length && handleNewMessage(messagesData[messagesData.length - 1]);
+  $: messagesData.length &&
+    handleNewMessage(messagesData[messagesData.length - 1]);
 </script>
 
 <div class="container">
   <!-- Central Content Area -->
-
-  {#if playgroundStatus === "chat"}
-    <div class="content">
+  <div class="content">
+    {#if playgroundStatus === "chat"}
       <h1>Welcome to the Playground</h1>
       <p>You can chat, but there is also much more!</p>
-    </div>
-  {:else if playgroundStatus === "guesswho"}
-    <Guesswho />
-  {/if}
-
+    {:else if playgroundStatus === "guesswho"}
+      <Guesswho bind:peer bind:messagesData />
+    {/if}
+  </div>
   <!-- Lateral Chat Area -->
   <div class="chat" class:open={isChatOpen}>
     <div class="chat-header">
@@ -103,7 +130,9 @@
     </div>
     <div class="chat-messages" bind:this={chatElement}>
       {#each messages as message}
-        <p style={`margin-${message.id === peer.id ? "left" : "right"}:${message.id === "" ? 0 : 10}px`}>
+        <p
+          style={`margin-${message.id === peer.id ? "left" : "right"}:${message.id === "" ? 0 : 10}px`}
+        >
           {new Date(message.timestamp).toLocaleTimeString("it-IT")} -
           <b
             style={`color:${colors[userIDs.indexOf(message.id) % colors.length]}`}
@@ -162,6 +191,7 @@
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+    z-index: 1000;
   }
 
   .chat-header {
