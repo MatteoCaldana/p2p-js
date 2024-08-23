@@ -1,0 +1,557 @@
+[
+    {
+        "name": "Paola Francesca Antonietti",
+        "position": "Head of Laboratory MOXFull Professor",
+        "img": "./assets/mox_people/imgs/Paola Francesca Antonietti.jpg"
+    },
+    {
+        "name": "Pasquale Ciarletta",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Pasquale Ciarletta.jpg"
+    },
+    {
+        "name": "Luca Formaggia",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Luca Formaggia.jpg"
+    },
+    {
+        "name": "Anna Maria Paganoni",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Anna Maria Paganoni.jpg"
+    },
+    {
+        "name": "Simona Perotto",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Simona Perotto.jpeg"
+    },
+    {
+        "name": "Laura Maria Sangalli",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Laura Maria Sangalli.png"
+    },
+    {
+        "name": "Piercesare Secchi",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Piercesare Secchi.jpg"
+    },
+    {
+        "name": "Marco Verani",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Marco Verani.jpg"
+    },
+    {
+        "name": "Paolo Zunino",
+        "position": "Full Professor",
+        "img": "./assets/mox_people/imgs/Paolo Zunino.jpg"
+    },
+    {
+        "name": "Alfio Quarteroni",
+        "position": "Emeritus Professor",
+        "img": "./assets/mox_people/imgs/Alfio Quarteroni.png"
+    },
+    {
+        "name": "Luca Bonaventura",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Luca Bonaventura.jpg"
+    },
+    {
+        "name": "Domenico Brunetto",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Domenico Brunetto.jpg"
+    },
+    {
+        "name": "Gabriele Ciaramella",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Gabriele Ciaramella.jpg"
+    },
+    {
+        "name": "Carlo De Falco",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Carlo De Falco.jpg"
+    },
+    {
+        "name": "Luca Dede'",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Luca Dede'.jpg"
+    },
+    {
+        "name": "Alessio Fumagalli",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Alessio Fumagalli.jpg"
+    },
+    {
+        "name": "Francesca Ieva",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Francesca Ieva.jpg"
+    },
+    {
+        "name": "Andrea Manzoni",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Andrea Manzoni.png"
+    },
+    {
+        "name": "Ilario Mazzieri",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Ilario Mazzieri.jpg"
+    },
+    {
+        "name": "Alessandra Menafoglio",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Alessandra Menafoglio.jpg"
+    },
+    {
+        "name": "Stefano Micheletti",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Stefano Micheletti.jpg"
+    },
+    {
+        "name": "Edie Miglio",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Edie Miglio.jpg"
+    },
+    {
+        "name": "Nicola Parolini",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Nicola Parolini.jpg"
+    },
+    {
+        "name": "Anna Scotti",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Anna Scotti.jpg"
+    },
+    {
+        "name": "Lorenzo Valdettaro",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Lorenzo Valdettaro.jpg"
+    },
+    {
+        "name": "Simone Vantini",
+        "position": "Associate Professor",
+        "img": "./assets/mox_people/imgs/Simone Vantini.jpg"
+    },
+    {
+        "name": "Paolo Barbante",
+        "position": "Permanent Assistant Professor",
+        "img": "./assets/mox_people/imgs/Paolo Barbante.jpg"
+    },
+    {
+        "name": "Michele Botti",
+        "position": "Tenure-track Assistant Professor",
+        "img": "./assets/mox_people/imgs/Michele Botti.jpg"
+    },
+    {
+        "name": "Stefano Pagani",
+        "position": "Tenure-track Assistant Professor",
+        "img": "./assets/mox_people/imgs/Stefano Pagani.png"
+    },
+    {
+        "name": "Francesco Regazzoni",
+        "position": "Tenure-track Assistant Professor",
+        "img": "./assets/mox_people/imgs/Francesco Regazzoni.jpg"
+    },
+    {
+        "name": "Francesca Bonizzoni",
+        "position": "Tenure-track Assistant Professor",
+        "img": "./assets/mox_people/imgs/Francesca Bonizzoni.jpg"
+    },
+    {
+        "name": "Federica Nicolussi",
+        "position": "Tenure-track Assistant Professor",
+        "img": "./assets/mox_people/imgs/Federica Nicolussi.jpg"
+    },
+    {
+        "name": "Lara Cavinato",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Lara Cavinato.jpg"
+    },
+    {
+        "name": "Stefania Fresca",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Stefania Fresca.jpg"
+    },
+    {
+        "name": "Ivan Fumagalli",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Ivan Fumagalli.jpg"
+    },
+    {
+        "name": "Andrea Gilardi",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Andrea Gilardi.jpg"
+    },
+    {
+        "name": "Marco Magri",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Marco Magri.jpeg"
+    },
+    {
+        "name": "Chiara Masci",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Chiara Masci.jpeg"
+    },
+    {
+        "name": "Davide Riccobelli",
+        "position": "Assistant Professor",
+        "img": "./assets/mox_people/imgs/Davide Riccobelli.png"
+    },
+    {
+        "name": "Dario Andrini",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Dario Andrini.jpg"
+    },
+    {
+        "name": "Alberto Artoni",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Alberto Artoni.png"
+    },
+    {
+        "name": "Stefano Bonetti",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Stefano Bonetti.jpg"
+    },
+    {
+        "name": "Wietse Boon",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Wietse Boon.jpg"
+    },
+    {
+        "name": "Michele Bucelli",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Michele Bucelli.jpg"
+    },
+    {
+        "name": "Luca Caldera",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Luca Caldera.jpg"
+    },
+    {
+        "name": "Nicola Ferro",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Nicola Ferro.jpg"
+    },
+    {
+        "name": "Nicola Rares Franco",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Nicola Rares Franco.png"
+    },
+    {
+        "name": "Marc Hirschvogel",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Marc Hirschvogel.jpg"
+    },
+    {
+        "name": "Roberto Piersanti",
+        "position": "Post-doctoral Research Fellow",
+        "img": "./assets/mox_people/imgs/Roberto Piersanti.jpg"
+    },
+    {
+        "name": "Martina Ciancarelli",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Martina Ciancarelli.png"
+    },
+    {
+        "name": "Marco Francesco De Sanctis",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Marco Francesco De Sanctis.jpg"
+    },
+    {
+        "name": "Ilenia Di Battista",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Ilenia Di Battista.png"
+    },
+    {
+        "name": "Michelangelo G. Garroni",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Michelangelo G. Garroni.jpg"
+    },
+    {
+        "name": "Giacomo Milan",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Giacomo Milan.jpg"
+    },
+    {
+        "name": "Roberta Troilo",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Roberta Troilo.jpg"
+    },
+    {
+        "name": "Julian Ven\u00e9",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Julian Ven\u00e9.jpg"
+    },
+    {
+        "name": "Michele Visinoni",
+        "position": "Research Fellow",
+        "img": "./assets/mox_people/imgs/Michele Visinoni.jpg"
+    },
+    {
+        "name": "Paolo Joseph Baioni",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Paolo Joseph Baioni.jpg"
+    },
+    {
+        "name": "Teresa Bortolotti",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Teresa Bortolotti.png"
+    },
+    {
+        "name": "Simone Brivio",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Simone Brivio.jpg"
+    },
+    {
+        "name": "Arianna Burzacchi",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Arianna Burzacchi.jpg"
+    },
+    {
+        "name": "Matteo Caldana",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Matteo Caldana.jpg"
+    },
+    {
+        "name": "Giuseppe Cali\u00f2",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Giuseppe Cali\u00f2.jpeg"
+    },
+    {
+        "name": "Emilia Capuano",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Emilia Capuano.jpg"
+    },
+    {
+        "name": "Michele Cavazzutti",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Michele Cavazzutti.jpg"
+    },
+    {
+        "name": "Gerardo Cicalese",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Gerardo Cicalese.jpeg"
+    },
+    {
+        "name": "Aldo Clemente",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Aldo Clemente.jpeg"
+    },
+    {
+        "name": "Mattia Corti",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Mattia Corti.jpg"
+    },
+    {
+        "name": "Beatrice Crippa",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Beatrice Crippa.jpeg"
+    },
+    {
+        "name": "Nunzio Dimola",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Nunzio Dimola.jpg"
+    },
+    {
+        "name": "Marco Fois",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Marco Fois.jpg"
+    },
+    {
+        "name": "Marco Gambarini",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Marco Gambarini.jpeg"
+    },
+    {
+        "name": "Alfredo Gimenez Zapiola",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Alfredo Gimenez Zapiola.jpeg"
+    },
+    {
+        "name": "Caterina Beatrice Leimer Saglio",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Caterina Beatrice Leimer Saglio.jpg"
+    },
+    {
+        "name": "Fabien Ma\u00ebl Lespagnol",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Fabien Ma\u00ebl Lespagnol.jpg"
+    },
+    {
+        "name": "Luca Liverotti",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Luca Liverotti.jpeg"
+    },
+    {
+        "name": "Cristina Macaluso",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Cristina Macaluso.jpg"
+    },
+    {
+        "name": "Susanna Mirabella",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Susanna Mirabella.jpg"
+    },
+    {
+        "name": "Alessandro Palummo",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Alessandro Palummo.png"
+    },
+    {
+        "name": "Simone Panzeri",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Simone Panzeri.jpg"
+    },
+    {
+        "name": "Giulia Patan\u00e8",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Giulia Patan\u00e8.png"
+    },
+    {
+        "name": "Irena Radisic",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Irena Radisic.jpg"
+    },
+    {
+        "name": "Giacomo Speroni",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Giacomo Speroni.jpg"
+    },
+    {
+        "name": "Erika Temellini",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Erika Temellini.jpg"
+    },
+    {
+        "name": "Andrea Tonini",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Andrea Tonini.jpg"
+    },
+    {
+        "name": "Francesco Vaccaro",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Francesco Vaccaro.jpg"
+    },
+    {
+        "name": "Piermario Vitullo",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Piermario Vitullo.jpeg"
+    },
+    {
+        "name": "Giovanni Ziarelli",
+        "position": "PhD Student (M3E)",
+        "img": "./assets/mox_people/imgs/Giovanni Ziarelli.jpeg"
+    },
+    {
+        "name": "Alessandra Catalano",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Alessandra Catalano.jpg"
+    },
+    {
+        "name": "Andrea Corbetta",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Andrea Corbetta.png"
+    },
+    {
+        "name": "Nicole Fontana",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Nicole Fontana.jpg"
+    },
+    {
+        "name": "Matteo Greco",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Matteo Greco.jpg"
+    },
+    {
+        "name": "Guillaume  Koechlin",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Guillaume  Koechlin.jpg"
+    },
+    {
+        "name": "Alessia Mapelli",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Alessia Mapelli.jpg"
+    },
+    {
+        "name": "Valeria Nazzari",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Valeria Nazzari.png"
+    },
+    {
+        "name": "Alessandra Ragni",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Alessandra Ragni.jpeg"
+    },
+    {
+        "name": "Lidia Rossi",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Lidia Rossi.jpeg"
+    },
+    {
+        "name": "Laura Savare'",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Laura Savare'.jpg"
+    },
+    {
+        "name": "Emanuel Soda",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Emanuel Soda.jpeg"
+    },
+    {
+        "name": "Vittorio Torri",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Vittorio Torri.jpg"
+    },
+    {
+        "name": "Andrea Mario Vergani",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Andrea Mario Vergani.jpg"
+    },
+    {
+        "name": "Filippo Zacchei",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Filippo Zacchei.jpg"
+    },
+    {
+        "name": "Daniela Zanotti",
+        "position": "PhD Student (DADS)",
+        "img": "./assets/mox_people/imgs/Daniela Zanotti.png"
+    },
+    {
+        "name": "Giuseppe Aloe",
+        "position": "ICT services",
+        "img": "./assets/mox_people/imgs/Giuseppe Aloe.jpg"
+    },
+    {
+        "name": "Eleonora Arnone",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Eleonora Arnone.jpg"
+    },
+    {
+        "name": "Blerta Begu",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Blerta Begu.jpg"
+    },
+    {
+        "name": "Lorenzo Bennati",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Lorenzo Bennati.jpeg"
+    },
+    {
+        "name": "Antonio F. Corno",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Antonio F. Corno.png"
+    },
+    {
+        "name": "Caterina Gregorio",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Caterina Gregorio.jpeg"
+    },
+    {
+        "name": "Michela Massi",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Michela Massi.png"
+    },
+    {
+        "name": "Francesca Renzi",
+        "position": "External Scientific collaborator",
+        "img": "./assets/mox_people/imgs/Francesca Renzi.jpeg"
+    }
+]
