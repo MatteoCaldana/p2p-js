@@ -5,10 +5,6 @@
   export let messagesData;
   export let peer;
 
-  const guessCategories = Object.keys(images[0])
-    .filter((k) => k != "img")
-    .filter((k) => k != "name");
-
   // aesthetics
   let primaryColor = "#e4d5b7";
   let primaryColorDark = "#c0891c";
@@ -38,7 +34,6 @@
   let possibleGuesses = [...Array(images.length).keys()];
   let myTurn = 1;
   let opponentTurn = 1;
-  let questions = [];
 
   const resetState = () => {
     selectedCharacter = null;
@@ -47,7 +42,6 @@
     possibleGuesses = [...Array(images.length).keys()];
     myTurn = 1;
     opponentTurn = 1;
-    questions = [];
   };
 
   const handleClick = (index) => {
@@ -74,34 +68,6 @@
       console.log(
         "Error: should never be able to confirm character without any selection."
       );
-    }
-  };
-
-  const computeQuestions = (possibleIndexes) => {
-    let questionMap = guessCategories.reduce((acc, key) => {
-      acc[key] = new Set();
-      return acc;
-    }, {});
-    let j = 0;
-    for (let i = 0; i < images.length; i++) {
-      if (possibleIndexes[j] === i) {
-        guessCategories.forEach((key) => questionMap[key].add(images[i][key]));
-        j++;
-      }
-    }
-
-    questions = [];
-    for (let key in questionMap) {
-      if (questionMap[key].size === 1) {
-        continue;
-      }
-      for (let value of questionMap[key]) {
-        questions.push({
-          text: `Is the ${key} of X: ${value}?`,
-          key: key,
-          value: value,
-        });
-      }
     }
   };
 
@@ -133,8 +99,6 @@
   window.addEventListener("resize", updateColumns);
 
   $: messagesData.length && parseMessage(messagesData[messagesData.length - 1]);
-
-  $: computeQuestions(possibleGuesses);
 
   $: if (selectedCharacter !== null && otherPlayerCharacter !== null) {
     console.log("Game started!");
@@ -187,7 +151,6 @@
           bind:myTurn
           bind:opponentTurn
           bind:activeImageIndex
-          bind:questions
           bind:possibleGuesses
           bind:gameStatus
           bind:messagesData

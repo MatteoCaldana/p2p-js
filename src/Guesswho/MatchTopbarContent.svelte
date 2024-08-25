@@ -6,13 +6,49 @@
   export let myTurn;
   export let opponentTurn;
   export let activeImageIndex;
-  export let questions;
   export let possibleGuesses;
   export let gameStatus;
   export let messagesData;
   export let peer;
 
-  let selected = `${questions[0].key}:${questions[0].value}`;
+  const guessCategories = Object.keys(images[0])
+    .filter((k) => k != "img")
+    .filter((k) => k != "name");
+
+  const computeQuestions = (possibleIndexes) => {
+    console.log("Computing questions for", possibleIndexes);
+    let questionMap = guessCategories.reduce((acc, key) => {
+      acc[key] = new Set();
+      return acc;
+    }, {});
+    console.log("Question map:", questionMap);
+    let j = 0;
+    for (let i = 0; i < images.length; i++) {
+      if (possibleIndexes[j] === i) {
+        guessCategories.forEach((key) => questionMap[key].add(images[i][key]));
+        j++;
+      }
+    }
+    console.log("Question map:", questionMap);
+
+    let qs = [];
+    for (let key in questionMap) {
+      if (questionMap[key].size === 1) {
+        continue;
+      }
+      for (let value of questionMap[key]) {
+        qs.push({
+          text: `Is the ${key} of X: ${value}?`,
+          key: key,
+          value: value,
+        });
+      }
+    }
+    return qs;
+  };
+
+  let questions = computeQuestions(possibleGuesses);
+  let selectedQuestion = `${questions[0].key}:${questions[0].value}`;
 
   const addMessage = (message) => {
     messagesData = [
@@ -47,11 +83,13 @@
         result: "incorrect",
       });
     }
+    activeImageIndex = null;
   };
+
   const handleQuestion = (_) => {
     myTurn += 1;
-    console.log("Asking question:", selected);
-    const [key, value] = selected.split(":");
+    console.log("Asking question:", selectedQuestion);
+    const [key, value] = selectedQuestion.split(":");
     let result;
     if (images[otherPlayerCharacter][key] === value) {
       console.log("Correct!");
@@ -68,6 +106,8 @@
       key: key,
       result: result,
     });
+    questions = computeQuestions(possibleGuesses);
+    selectedQuestion = `${questions[0].key}:${questions[0].value}`;
   };
 </script>
 
@@ -81,7 +121,7 @@
   {#if myTurn <= opponentTurn}
     <form action="" onsubmit="return false">
       <label for="cars">Ask a question:</label>
-      <select name="questions" id="questions" bind:value={selected}>
+      <select name="questions" id="questions" bind:value={selectedQuestion}>
         {#each questions as question}
           <option value={`${question.key}:${question.value}`}
             >{question.text}</option

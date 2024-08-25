@@ -73,6 +73,11 @@
 
   const handleNewMessage = (message) => {
     console.log("New message:", message);
+    // add username
+    if (message.id === peer.id) {
+      message.user = username;
+    }
+    // do logic for different message types
     if (message.type === "chat") {
       handleChatCommands(message.message);
       messages = [...messages, message];
@@ -93,8 +98,8 @@
         }
       }
     }
+    // send message if we are the source
     if (message.id === peer.id) {
-      message.user = username;
       console.log("Sending message:", message);
       connection.send(JSON.stringify(message));
     }
